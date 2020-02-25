@@ -38,9 +38,10 @@ document.write("Quantidade de itens na pilha: "+pilha.getQuantidadeDados()+"</br
 
 document.write("O valor do topo é "+pilha.getTopo()+"</br></br>");
 
-function Pilha(){
+function Pilha(cap){
 	var topo = null;
 	var quantidadeDados = 0;
+	var capacidae = cap;
 	
 	//Obter quantidade de dados na pilha.
 	this.getQuantidadeDados = function(){
@@ -49,17 +50,21 @@ function Pilha(){
 	
 	//Adicionar dados ao topo da pilha (PUSH)
 	this.push = function(dado){
-		var no = {
-			dado : dado,
-			dadoAbaixo : null
-		};
-		
-		no.dadoAbaixo = topo;
-		topo = no;
-		
-		quantidadeDados++;
-		
-		return topo.dado;
+		if(quantidadeDados < capacidade){
+			var no = {
+				dado : dado,
+				dadoAbaixo : null
+			};
+			
+			no.dadoAbaixo = topo;
+			topo = no;
+			
+			quantidadeDados++;
+			
+			return topo.dado;
+		}else{
+			return "Erro de overflow!";
+		}
 	}	
 	
 	//Remover dados do topo da pilha (POP)
