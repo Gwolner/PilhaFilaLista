@@ -29,12 +29,9 @@ A abstração de informações através do TAD foi um passo importante para o qu
 
 Uma pilha é uma estrutura de dados que serve como uma coleção de elementos, permitindo o acesso somente ao último item que foi inserido na estrutura (item do topo). Esse item pode ser lido ou removido. Caso seja removido, teremos acesso ao item imediatamente anterior (abaixo) a ele. Este item passa agora a ser o último item da pilha (topo). Este comportamento se repete até que a estrutura esteja vazia.
 
-
-
 ## Pilha x Array
 
 Um array (vetor) é outra estrutura que permite o armazenamento de itens (dados), onde podemos acessar qualquer elemento em qualquer posição diretamente, sem a necessidade de acessar itens anteriores primeiro. Obviamente, para que isto ocorra, é preciso conhecer a posição do elemento que se deseja acessar.
-Já uma pilha é diferente pois o acesso aos seus itens é restrito, já que somente um item pode ser lido ou removido por vez, na ordem inversa em que foram colocado na pilha (item do topo), ao contrário de um array.
 
 ## Como funciona um Pilha (LIFO)
 
@@ -43,6 +40,8 @@ Imagine uma pilha de pratos na cozinha. Se quisermos utilizar um prato, pegamos 
 Quando um prato é lavado, após seu uso, pode ser recolocado novamente na pilha de pratos, sempre no topo. Esse prato recém-colocado na pilha passa a ser o último, e o primeiro que será retirado quando precisarmos usar um prato novamente.
 
 Essa é a ideia geral de uma estrutura de dados do tipo pilha. Nela, os dados são inseridos na pilha (empilhados), e acessados em ordem inversa (o último a ser inserido é sempre o primeiro a ser utilizado). Colocar um elemento no topo de uma pilha é uma operação que recebe um nome especial: push. Já a remoção de um elemento do topo da pilha é uma operação denominada pop.
+
+<img src="img/pilha.png" width="773" height="540"> 
 
 Por conta deste modo de operação, as pilhas são classificadas como estruturas de dados de armazenamento Last-In, First-Out – LIFO, “o último a entrar é o primeiro a sair”, pois o último item inserido na pilha é sempre o primeiro a ser removido (ou lido).
 
@@ -61,58 +60,47 @@ As pilhas encontram inúmeras aplicações em programação e desenvolvimento de
 
 ## Fila (Queue)
 
-O que diferencia a fila da pilha é a ordem de saída dos elementos: enquanto na pilha “o último que entra é o primeiro que sai”, na fila “o primeiro que entra é o primeiro que sai” (a sigla FIFO – first in, first out – é usada para descrever essa estratégia).
-
-A ideia fundamental da fila é que só podemos inserir um novo elemento no final da fila e só podemos retirar o elemento do início.
-
-Para implementar uma fila, devemos ser capazes de inserir novos elementos em uma extremidade, o fim, e retirar elementos da outra extremidade, o início. Ou seja, sempre inserimos novos elementos no fim da fila e quando removemos u um elemento ele é retirado do início da fila.
+Assim como a pilha, também é  uma estrutura de dados responsável por uma coleção de elementos em que só podemos inserir um novo elemento no final da coleção e só podemos retirar o elemento no início desta. Ou seja, a ordem que um item é removido (ou lido) da fila é a mesma ordem em que ele entrou nela.
 
 ## Fila x Array
 
-Basicamente fila  só permite um sentido de entrada de elementos "FIFO"   First In, First Out
-
-Já o vetor(arrays) é um conjunto de elementos.. que pode ser manipulado.. como tirar um elemento do inicio e por no fim.. ou tirar um elemento do meio e por no início...  e assim por diante.  esta é a principal diferença.
+Um array é um conjunto de elementos que pode ser manipulado de várias formas, como tirar um elemento do inicio e por no fim ou tirar um elemento do meio e por no início, e assim por diante. Esta é a principal diferença.
 
 ## Como funciona uma Fila (FIFO)
 
-Exemplificar com fila de banco!!
+Imaginemos agora uma fila de banco. Uma pessoa chega e, se não houver ninguem na sua frente, ela é logo atendida. Supondo que chegue mais uma pessoa, ela verá que a sua frente uma pessoa está sendo atendida e então espera sua vez. Caso cheguem mais pessoas, uma fila se forma e cada uma será atendida na ordem em que se inseriram na fila.
 
-FIFO é a sigla em inglês para “First in, first out”, que no idioma português quer dizer que o primeiro [produto] a entrar no armazém deve ser também o primeiro a sair, com o objetivo de evitar a perda por vencimento da mercadoria.
+A que está na frente será atendido antes do que está atrás, este será atendido antes do que está imediatamente atrás de si e assim por diante.
+
+Para implementar uma fila não é diferente: devemos ser capazes de inserir novos na extremidade do fim e retirar/ler elementos da outra extremidade, o início. Sempre inserimos novos elementos no fim da fila e estamos realizando a ação de enfileirar, já quando removemos um elemento do início da fila, estamos realizando a ação de desenfileirar.
+
+<img src="img/fila.png" width="773" height="540"> 
+
+As filas são classificadas como estruturas de dados de armazenamento FIFO, que é a sigla em inglês para “First in, first out”, que no idioma português quer dizer "o primeiro a entrar é o primeiro a sair"
 
 ## Aplicações das filas
 
-* Fila de arquivos para impressão;
-* Atendimento de processos requisitados ao um S.O.;
-* Buffer para gravação de dados em mídia;
-* Processos de comunicação em redes de computadores.
-
-
-
-
-
-
-
-
-
-
+* Fila de arquivos para impressão
+* Atendimento de processos requisitados ao um S.O.
+* Buffer para gravação de dados em mídia
+* Processos de comunicação em redes de computadores
 
 ## Lista
 
-Em uma estrutura de dados tipo lista, para cada novo elemento inserido na lista,  alocamos um espaço de memória para armazená-lo. Dessa forma, o espaço total de memória gasto pela estrutura é proporcional ao número de elementos armazenados na lista.
-
-No entanto, não podemos garantir que os elementos armazenados na lista ocuparão um espaço de memória contíguo, pois a alocação é feita dinamicamente; portanto, não temos acesso direto aos elementos da lista, somente através do endereço de cada elemento.
-
-Para percorrer todos os elementos da lista, devemos explicitamente guardar o endereço de cada elemento da ista, o que é feito armazenando-se, junto com a informação de cada elemento, um ponteiro com o endereço para o próximo elemento da lista. Por isso, os elementos da lista estão ligados uns aos outros, encadeados e por conta desta característica a lista é também conhecida como lista encadeada.
+É uma estrutura de dados tipo coleção, em que cada cada elemento que se deseja inserir, remover ou ler pode estar antes ou depois de um elemento ja presente na lista. Caso a lista esteja vazia, através de uma posição/índice, pode-se adicionar um elemento à lista.
 
 ## Lista x Array
 
-https://www.caelum.com.br/apostila-java-orientacao-objetos/collections-framework/
+Aqui temos um ponto sensível. <b>Geralmente</b> um array pode ser usado como lista e o contrário pode ser verdade. Entretanto, podem haver particularidades decorrente da linguagem que se usa a lista, no Java por exemplo, um ArrayList difere de um array normal, primeiro que o Arraylsite aceita tipos de elementos diferentes e não precisa ter a quantidade máxima de elementos definida previamente, já o array precisa ter uma quantidade limite declarada em sua criação e comporta apenas elementos de mesmo tipo (int, char, String, etc).
 
 ## Como funciona uma lista
 
-Item netra em qualquer posição livre, sem afetar a posição dos demais itens presentes na lista. na remoção acontece o mesmo, um item é removido deixando um espaço vazio (null) no lugar, sem deslocar quaisquer outro elemento.
+Assim como escrevemos nas linhas de um papel para nos guiarmos de quais itens comprar, a estrutura de dados lista permite o mesmo feito. Um item adicionado ou removido pode estar em qualquer posição da lista, sendo essa posição definida pelo seu index, que é o valor numérico para informar esta posição dentro da estrutura lista. 
+
+Na adição de um item é fundamental que seu index não esteja sendo ocupado por outro item qualquer, pois poderá haver, ou não, substituição de um item por outro (depende da implementação da adição). Caso não haja a troca dos itens, pode-se haver uma mensagem de erro informando a não adição devido a presença de um item no index informado(novamente, a dpeender da implementação feita pelo programador) 
 
 ## Aplicações das listas
 
-## Estruturas ligadas/encadeadas
-
+* Organizar player de música
+* Aplicativos de compras
+* Adicionar arquivos em diretórios
