@@ -58,7 +58,7 @@ As pilhas encontram inúmeras aplicações em programação e desenvolvimento de
 * Endereçamento de instruções em microprocessadores
 * Análise de expressões aritméticas
 
-## Fila (Queue)
+# Fila (Queue)
 
 Assim como a pilha, também é  uma estrutura de dados responsável por uma coleção de elementos em que só podemos inserir um novo elemento no final da coleção e só podemos retirar o elemento no início desta. Ou seja, a ordem que um item é removido (ou lido) da fila é a mesma ordem em que ele entrou nela.
 
@@ -85,7 +85,7 @@ As filas são classificadas como estruturas de dados de armazenamento FIFO, que 
 * Buffer para gravação de dados em mídia
 * Processos de comunicação em redes de computadores
 
-## Lista
+# Lista
 
 É uma estrutura de dados tipo coleção, em que cada cada elemento que se deseja inserir, remover ou ler pode estar antes ou depois de um elemento ja presente na lista. Caso a lista esteja vazia, através de uma posição/índice, pode-se adicionar um elemento à lista.
 
