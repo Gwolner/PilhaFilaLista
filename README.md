@@ -1,8 +1,12 @@
 # Tipo abstrato de dado (TAD)
 
-O TAD é uma especificação de um conjunto de dados e operações que podem ser executadas sobre esses dados. Também pode ser entendido como uma metodologia de programação que visa reduzir a informação necessária para construir um algoritmo através da abstração das variáveis envolvidas, tornando-as uma única entidade com operações próprias.
+Os tipos e estruturas de dados existem para serem usados pelo programa para acessar informações neles armazenadas, por meio de operações apropriadas. Do ponto de vista do programador, muitas vezes é conveniente pensar nas estruturas de dados em termos das operações que elas suportam, e não da maneira como elas são implementadas. Uma estrutura de dados definida dessa forma é chamada de um Tipo Abstrato de Dados.
 
-Em projetos anteriores a metodologia TAD, um carro seria representado por variáveis soltas (modelo, fabricante, velocidade, cor, placa, etc) e estas seriam tratadas isoladamente, sem ligações lógicas entre sí. Usando a metodologia TAD pensamos em todas estas variáveis como uma "única variável/tipo" chamada carro, onde há funções/métodos próprios que lhe conferem a manipulação das variáveis que o compõe.
+TAD, portanto, estabelece o conceito de tipo de dado separado da sua representação. Definido como um modelo matemático por meio de um par <b>(v,o)</b> em que <b>v</b> é um conjunto de valores e <b>o</b> é um conjunto de operações sobre esses 
+
+Requer que operações sejam definidas sobre os dados sem estarem atreladas a uma representação específica. Programador que usa um tipo de dado (real, integer, array) não precisa saber como tais valores são representados internamente. O mesmo princípio pode ser aplicado a pilhas, listas, pilhas: Se existe uma implementação disponível de uma lista, um programador pode utilizá-la como se fosse uma  ́caixa preta, acessando-a por meio das operações que ela suporta.
+
+O TAD também pode ser entendido como uma metodologia de programação que visa reduzir a informação necessária para construir um algoritmo através da abstração das variáveis envolvidas, tornando-as uma única entidade com operações próprias. Em projetos anteriores a metodologia TAD, um carro seria representado por variáveis soltas (modelo, fabricante, velocidade, cor, placa, etc) e estas seriam tratadas isoladamente, sem ligações lógicas entre sí. Usando a metodologia TAD pensamos em todas estas variáveis como uma "única variável/tipo" chamada carro, onde há funções/métodos próprios que lhe conferem a manipulação das variáveis que o compõe.
 
 ```
 estrutura Carro{
