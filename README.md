@@ -4,9 +4,13 @@ Os tipos e estruturas de dados existem para serem usados pelo programa para aces
 
 TAD, portanto, estabelece o conceito de tipo de dado separado da sua representação. Definido como um modelo matemático por meio de um par <b>(v,o)</b> em que <b>v</b> é um conjunto de valores e <b>o</b> é um conjunto de operações sobre esses 
 
-Requer que operações sejam definidas sobre os dados sem estarem atreladas a uma representação específica. Programador que usa um tipo de dado (real, integer, array) não precisa saber como tais valores são representados internamente. O mesmo princípio pode ser aplicado a pilhas, listas, pilhas: Se existe uma implementação disponível de uma lista, um programador pode utilizá-la como se fosse uma  ́caixa preta, acessando-a por meio das operações que ela suporta.
+Requer que operações sejam definidas sobre os dados sem estarem atreladas a uma representação específica. Programador que usa um tipo de dado (real, integer, array) não precisa saber como tais valores são representados internamente. 
 
-O TAD também pode ser entendido como uma metodologia de programação que visa reduzir a informação necessária para construir um algoritmo através da abstração das variáveis envolvidas, tornando-as uma única entidade com operações próprias. Em projetos anteriores a metodologia TAD, um carro seria representado por variáveis soltas (modelo, fabricante, velocidade, cor, placa, etc) e estas seriam tratadas isoladamente, sem ligações lógicas entre sí. Usando a metodologia TAD pensamos em todas estas variáveis como uma "única variável/tipo" chamada carro, onde há funções/métodos próprios que lhe conferem a manipulação das variáveis que o compõe.
+O mesmo princípio pode ser aplicado a pilhas, listas, pilhas: Se existe uma implementação disponível de uma lista, um programador pode utilizá-la como se fosse uma  ́caixa preta, acessando-a por meio das operações que ela suporta.
+
+O TAD também pode ser entendido como uma metodologia de programação que visa reduzir a informação necessária para construir um algoritmo através da abstração das variáveis envolvidas, tornando-as uma única entidade com operações próprias. 
+
+Em projetos anteriores a metodologia TAD, um carro seria representado por variáveis soltas (modelo, fabricante, velocidade, cor, placa, etc) e estas seriam tratadas isoladamente, sem ligações lógicas entre sí. Usando a metodologia TAD pensamos em todas estas variáveis como uma "única variável/tipo" chamada carro, onde há funções/métodos próprios que lhe conferem a manipulação das variáveis que o compõe.
 
 ```
 estrutura Carro{
@@ -19,13 +23,13 @@ funcao Carro_DefinorCor(Carro carro) retorna booleano;
 funcao Carro_ConsultarModelo(Carro carro) retorna String;
 ```
 
-Além da estrutura Carro acima, há também os TADS conhecidos por por pilha, fila e lista. Na prática, o TAD é implementado usando-se um tipo composto (estrutura/registro/classe) com os valores pertencentes ao TAD e por funções/métodos que operam esta estrutura. 
-
-A abstração de informações através do TAD foi um passo importante para o que hoje é a Orientação a Objetos, permitindo o controle do acesso às informações de um tipo, a herança e o polimorfismo.
+A abstração de informações através do TAD foi um passo importante para o que hoje é a Orientação a Objetos, permitindo o controle do acesso às informações de um tipo, a herança e o polimorfismo. Na prática, o TAD é implementado usando-se um tipo composto (estrutura/registro/classe) com os valores pertencentes ao TAD e por funções/métodos que operam esta estrutura. 
 
 # Pilha (Stack)
 
 Uma pilha é uma estrutura de dados que serve como uma coleção de elementos, permitindo o acesso somente ao último item que foi inserido na estrutura (item do topo). Esse item pode ser lido ou removido. Caso seja removido, teremos acesso ao item imediatamente anterior (abaixo) a ele. Este item passa agora a ser o último item da pilha (topo). Este comportamento se repete até que a estrutura esteja vazia.
+
+
 
 ## Pilha x Array
 
