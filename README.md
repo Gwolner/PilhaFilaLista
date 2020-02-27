@@ -85,7 +85,7 @@ As filas são classificadas como estruturas de dados de armazenamento FIFO, que 
 * Buffer para gravação de dados em mídia
 * Processos de comunicação em redes de computadores
 
-# Lista
+# Lista (List)
 
 É uma estrutura de dados tipo coleção, em que cada cada elemento que se deseja inserir, remover ou ler pode estar antes ou depois de um elemento ja presente na lista. Caso a lista esteja vazia, através de uma posição/índice, pode-se adicionar um elemento à lista.
 
@@ -98,6 +98,8 @@ Aqui temos um ponto sensível. <b>Geralmente</b> um array pode ser usado como li
 Assim como escrevemos nas linhas de um papel para nos guiarmos de quais itens comprar, a estrutura de dados lista permite o mesmo feito. Um item adicionado ou removido pode estar em qualquer posição da lista, sendo essa posição definida pelo seu index, que é o valor numérico para informar esta posição dentro da estrutura lista. 
 
 Na adição de um item é fundamental que seu index não esteja sendo ocupado por outro item qualquer, pois poderá haver, ou não, substituição de um item por outro (depende da implementação da adição). Caso não haja a troca dos itens, pode-se haver uma mensagem de erro informando a não adição devido a presença de um item no index informado(novamente, a dpeender da implementação feita pelo programador) 
+
+<img src="img/lista.png" width="723" height="233"> 
 
 ## Aplicações das listas
 
